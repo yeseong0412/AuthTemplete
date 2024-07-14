@@ -62,3 +62,40 @@ Response
     "data": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJ5ZXNlb25nMDQxMkBuYXZlci5jb20iLCJyb2xlIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzIwOTU3MTM4LCJleHAiOjE3MjA5NjMxMzh9.bvhpmz3C7TjSsygJlFYYd7tlrx5525MiSTUUWiu6QTs"
 }
 ```
+
+#### Error 핸들링을 지원하여 오류시 아래와 같은 오류핸들링을 지원합니다.
+##### 빈 토큰으로 요청시
+```json
+{
+    "status": 403,
+    "state": "FORBIDDEN",
+    "message": "토큰을 넣어주세요."
+}
+```
+
+##### 토큰이 만료됬을경우
+```json
+{
+    "status": 403,
+    "state": "FORBIDDEN",
+    "message": "토큰이 만료되었어요"
+}
+```
+
+##### 토큰이 아닌 이상한 문자열 헤더에 담아 보낼시
+```json
+{
+    "status": 401,
+    "state": "UNAUTHORIZED",
+    "message": "토큰이 구조가 이상하거나 데이터가 일치하지 않아요"
+}
+```
+
+##### 비정상적인 토큰일시
+```json
+{
+    "status": 401,
+    "state": "UNAUTHORIZED",
+    "message": "JWT 처리과정에서 알수없는 오류가 발생했어요"
+}
+```
