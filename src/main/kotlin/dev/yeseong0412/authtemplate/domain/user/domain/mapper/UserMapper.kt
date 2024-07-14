@@ -4,12 +4,10 @@ import dev.yeseong0412.authtemplate.domain.user.domain.entity.UserEntity
 import dev.yeseong0412.authtemplate.domain.user.domain.model.User
 import dev.yeseong0412.authtemplate.domain.user.presentation.dto.request.RegisterUserRequest
 import dev.yeseong0412.authtemplate.global.common.Mapper
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Component
 
 @Component
 class UserMapper(
-    private val bytePasswordEncoder: BCryptPasswordEncoder
 ): Mapper<User, UserEntity> {
     override fun toDomain(entity: UserEntity): User {
         return User(
