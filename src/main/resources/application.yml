@@ -4,10 +4,10 @@
 server:
   port: 8080
 
-# MySQL Info
+# MySQL Info 본인 MySQL로 수정
 spring:
   datasource:
-    url: jdbc:mysql://localhost:8080/sample
+    url: jdbc:mysql://localhost:3306/bch
     username: root
     password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -15,7 +15,7 @@ spring:
 # JPA Setting
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show_sql: true
     properties:
       hibernate:
@@ -34,7 +34,7 @@ logging:
             sql: trace
 #    root: debug
 
-#JWT Secret Random code (32??? ??? ??? ??? ???? 64? ??? 16?? ???? ???)
+#JWT Secret Random code (32바이트 길이의 무작위 바이트 문자열을 64자 길이의 16진수 문자열로 인코딩)
 jwt :
   secret : 4626379cadc10451644ebfc33bdef68993cd3edc426640f8c28758cd853dbfa5
 
