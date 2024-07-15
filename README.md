@@ -1,7 +1,9 @@
 ## Kotlin + SpringBoot Auth Template
 코프링으로 만든 JWT Auth Template입니다.
 
-- [velog]() 에 자세한 설명을 적어뒀으니 참고 바랍니다.
+- [velog](https://velog.io/@yeseong0412/Spring-%EC%84%9C%EB%B2%84%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B4%EC%84%9C-%EC%95%84%EC%A7%81-JWT%EB%A5%BC-%EB%AA%A8%EB%A5%B8%EB%8B%A4%EA%B3%A0) 에 자세한 설명을 적어뒀으니 참고 바랍니다.
+- Access/Refresh 를 지원합니다.
+- JWT 로직 부분에 Error 핸들링을 지원합니다.
 - 참조시 yml 파일에 jwt.secret는 본인의 코드로 변경하는걸 추천드립니다.
 
 
